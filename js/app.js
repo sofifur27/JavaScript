@@ -1,3 +1,10 @@
+function edad(){
+	for (let i = 1; i <=20; i++) {
+		let edad = prompt ("Por último... ¿Su edad?");
+		alert ("Playlist N° "+i+" ");
+		break;
+	};
+}
 let nombre = prompt("Ingrese su nombre: ");
 alert ("hola " + nombre + "! " + "Mi nombre es Sofía, soy la creadora de ésta aplicación. ¡Un gusto! Te voy a ayudar a encontrar una playlist hecha especialmente para vos en el día de hoy a partir de algunas preguntas... ¿Comenzamos? :)");
 
@@ -22,16 +29,16 @@ case "1":
 4. Instrumental (sin letra)`);
 	switch (idioma) {
 				case "1":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "2":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "3":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "4":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 			};
 			break;
@@ -43,16 +50,16 @@ case "1":
 4. Instrumental (sin letra)`);
 		switch (idiom) {
 			case "1":
-				alert (prompt ("Por último... ¿Su edad?"));
+				edad ();
 				break;
 			case "2":
-				alert (prompt ("Por último... ¿Su edad?"));
+				edad ();
 				break;
 			case "3":
-				alert (prompt ("Por último... ¿Su edad?"));
+				edad ();
 				break;
 			case "4":
-				alert (prompt ("Por último... ¿Su edad?"));
+				edad ();
 				break;
 		}
 	}
@@ -70,16 +77,16 @@ case "1":
 4. Instrumental (sin letra)`);
 			switch (idioma) {
 				case "1":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "2":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "3":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "4":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 			};
 			break;
@@ -91,16 +98,16 @@ case "1":
 4. Instrumental (sin letra)`);
 			switch (idiom) {
 				case "1":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "2":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "3":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "4":
-					alert (prompt ("Por último... ¿Su edad?"));
+					aedad ();
 					break;
 			};
 			break;
@@ -118,18 +125,18 @@ case "1":
 3. Varios idiomas`);
 			switch (idioma) {
 				case "1":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "2":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "3":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				}
 			break;
 			case "2":
-				alert (prompt ("Por último... ¿Su edad?"));
+				edad ();
 				break;
 		};
 		break;
@@ -155,16 +162,16 @@ case "2":
 4. Instrumental (sin letra)`);
 	switch (idioma) {
 				case "1":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "2":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "3":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "4":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 			};
 			break;
@@ -176,16 +183,16 @@ case "2":
 4. Instrumental (sin letra)`);
 		switch (idiom) {
 			case "1":
-				alert (prompt ("Por último... ¿Su edad?"));
+				edad ();
 				break;
 			case "2":
-				alert (prompt ("Por último... ¿Su edad?"));
+				edad ();
 				break;
 			case "3":
-				alert (prompt ("Por último... ¿Su edad?"));
+				edad ();
 				break;
 			case "4":
-				alert (prompt ("Por último... ¿Su edad?"));
+				edad ();
 				break;
 		}
 	}
@@ -202,18 +209,18 @@ case "2":
 3. Varios idiomas`);
 					switch (idioma) {
 						case "1":
-							alert (prompt ("Por último... ¿Su edad?"));
+							edad ();
 							break;
 						case "2":
-							alert (prompt ("Por último... ¿Su edad?"));
+							edad ();
 							break;
 						case "3":
-							alert (prompt ("Por último... ¿Su edad?"));
+							edad ();
 							break;
 						}
 					break;
 					case "2":
-						alert (prompt ("Por último... ¿Su edad?"));
+						edad ();
 						break;
 				};
 				break;
@@ -236,18 +243,18 @@ let tranquilo = prompt (`Mi decisión favorita :) ¿Preferís con letra o solo i
 3. Varios idiomas`);
 			switch (idioma) {
 				case "1":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "2":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "3":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				}
 			break;
 			case "2":
-				alert (prompt ("Por último... ¿Su edad?"));
+				edad ();
 				break;
 		};
 	break;
@@ -263,13 +270,13 @@ case "4":
 3. Varios idiomas`);
 			switch (idioma) {
 				case "1":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "2":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "3":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				}
 			break;
@@ -280,13 +287,13 @@ case "4":
 3. Varios idiomas`);
 			switch (idiom) {
 				case "1":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "2":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				case "3":
-					alert (prompt ("Por último... ¿Su edad?"));
+					edad ();
 					break;
 				}
 			break;
