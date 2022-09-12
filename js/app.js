@@ -1,7 +1,8 @@
 function edad(){
-	for (let i = 1; i <=20; i++) {
+	const nro = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	for (let i = 0; i <= nro.length; i++) {
 		let edad = prompt ("Por último... ¿Su edad?");
-		alert ("Playlist N° "+i+" ");
+		alert ("Playlist N° "+ nro[i] +" ");
 		break;
 	};
 }
@@ -15,7 +16,7 @@ let humor = prompt (`¿Cómo te sentís hoy? Ingrese el número que más se le a
 4. aventurero`);
 switch (humor) {
 case "1":
-	let music = prompt("Aveces es bueno permitirse estar mal... En estos casos, ¿Qué estilo de música buscas escuchar? ¿Música FELIZ para levantar el ánimo, música TRISTE para buscar identificarse o callar la cabeza con TRANQUILIDAD?");
+	let music = prompt ("Aveces es bueno permitirse estar mal... En estos casos, ¿Qué estilo de música buscas escuchar? ¿Música FELIZ para levantar el ánimo, música TRISTE para buscar identificarse o callar la cabeza con TRANQUILIDAD?");
 	if(music == "feliz"){
 	let genre = prompt (`¡Me alegra leer eso! ¿Por cuál género te soles inclinar en estos casos?:
 1. pop/rock
