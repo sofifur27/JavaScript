@@ -1,23 +1,19 @@
-function edad(){
-	const nro = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-	for (let i = 0; i <= nro.length; i++) {
-		let edad = prompt ("Por último... ¿Su edad?");
-		alert ("Playlist N° "+ nro[i] +" ");
-		break;
-	};
+function edad (){
+let edad = prompt ("Por último... ¿Su edad?");
 }
+
 let nombre = prompt("Ingrese su nombre: ");
 alert ("hola " + nombre + "! " + "Mi nombre es Sofía, soy la creadora de ésta aplicación. ¡Un gusto! Te voy a ayudar a encontrar una playlist hecha especialmente para vos en el día de hoy a partir de algunas preguntas... ¿Comenzamos? :)");
-
 let humor = prompt (`¿Cómo te sentís hoy? Ingrese el número que más se le acerque:
 1. triste
 2. feliz
 3. tranquilo
 4. aventurero`);
+while (humor !="esc"){
 switch (humor) {
 case "1":
 	let music = prompt ("Aveces es bueno permitirse estar mal... En estos casos, ¿Qué estilo de música buscas escuchar? ¿Música FELIZ para levantar el ánimo, música TRISTE para buscar identificarse o callar la cabeza con TRANQUILIDAD?");
-	if(music == "feliz"){
+	if(music.toLowerCase() == "feliz"){
 	let genre = prompt (`¡Me alegra leer eso! ¿Por cuál género te soles inclinar en estos casos?:
 1. pop/rock
 2. techno/electrónica`);
@@ -65,7 +61,7 @@ case "1":
 		}
 	}
 	}
-	else if(music=="triste"){
+	else if(music.toLowerCase()=="triste"){
 	let genre = prompt (`Entiendo... ¿Por cuál género te soles inclinar en estos casos?:
 1. Música acústica
 2. Blues/Jazz`);
@@ -108,13 +104,13 @@ case "1":
 					edad ();
 					break;
 				case "4":
-					aedad ();
+					edad ();
 					break;
 			};
 			break;
 	}
 	}
-	else if(music=="tranquilidad"){
+	else if(music.toLowerCase()=="tranquilidad"){
 		let genre = prompt (`No es mala decisión. ¿Preferís con letra o solo instrumental?:
 1. Con letra
 2. Sin letra`);
@@ -198,7 +194,7 @@ case "2":
 		}
 	}
 	}
-	else if(felicidad == "tranquilidad") {
+	else if(felicidad.toLowerCase() == "tranquilidad") {
 		let genre = prompt (`No es mala decisión. ¿Preferís con letra o solo instrumental?:
 1. Con letra
 2. Sin letra`);
@@ -302,5 +298,5 @@ case "4":
 break;
 default:
 	break;
-}
-
+};
+};
