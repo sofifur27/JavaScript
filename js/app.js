@@ -9,7 +9,6 @@ let humor = prompt (`¿Cómo te sentís hoy? Ingrese el número que más se le a
 2. feliz
 3. tranquilo
 4. aventurero`);
-while (humor !="esc"){
 switch (humor) {
 case "1":
 	let music = prompt ("Aveces es bueno permitirse estar mal... En estos casos, ¿Qué estilo de música buscas escuchar? ¿Música FELIZ para levantar el ánimo, música TRISTE para buscar identificarse o callar la cabeza con TRANQUILIDAD?");
@@ -298,5 +297,4 @@ case "4":
 break;
 default:
 	break;
-};
 };
