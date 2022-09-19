@@ -1,300 +1,67 @@
-function edad (){
-let edad = prompt ("Por último... ¿Su edad?");
-}
-
-let nombre = prompt("Ingrese su nombre: ");
-alert ("hola " + nombre + "! " + "Mi nombre es Sofía, soy la creadora de ésta aplicación. ¡Un gusto! Te voy a ayudar a encontrar una playlist hecha especialmente para vos en el día de hoy a partir de algunas preguntas... ¿Comenzamos? :)");
-let humor = prompt (`¿Cómo te sentís hoy? Ingrese el número que más se le acerque:
-1. triste
-2. feliz
-3. tranquilo
-4. aventurero`);
-switch (humor) {
-case "1":
-	let music = prompt ("Aveces es bueno permitirse estar mal... En estos casos, ¿Qué estilo de música buscas escuchar? ¿Música FELIZ para levantar el ánimo, música TRISTE para buscar identificarse o callar la cabeza con TRANQUILIDAD?");
-	if(music.toLowerCase() == "feliz"){
-	let genre = prompt (`¡Me alegra leer eso! ¿Por cuál género te soles inclinar en estos casos?:
-1. pop/rock
-2. techno/electrónica`);
-	switch (genre) {
+//Mis objetos
+const playlist1 = {
+	link: "https://open.spotify.com/playlist/4lANDEaojBTkN3A3m2WQq4?si=aXV0QvMcQKePhpmU4EANRA",
+	nombre: "playlist1",
+	humor: "triste",
+  };
+  const playlist2 = {
+	link: "https://open.spotify.com/album/6DEjYFkNZh67HP7R9PSZvv?si=QwtHnXFoSJyisaNCL62wUA",
+	nombre: "playlist 2",
+	humor: "feliz",
+  };
+  const playlist3 = {
+	link: "https://open.spotify.com/playlist/3g6Kv0FXVKtrl7N58hQiKb?si=djAjbngqS9qyDVvAM_n5Ag",
+	nombre: "playlist 3",
+	humor: "tranquilo",
+  };
+  const playlist4 = {
+	link: "https://open.spotify.com/playlist/5We6JEGrjKCH6LN66wXvCj?si=K9Z60hf_SIWBvuXLHVmmog",
+	nombre: "playlist 4",
+	humor: "aventurero",
+  };
+  
+  //Creo mi array
+  const arrayPlaylist = [];
+  
+  //Agrego mis objetos al array
+  arrayPlaylist.push(playlist1, playlist2, playlist3, playlist4);
+  
+  //Mi funcion para mostrar las playlist
+  const MostrarPlaylist = function (opcion) {
+	//Creo el string para mostrar en el alert
+	let stringResultado = "Te recomiendo esta/s playlist 💪:\n\n";
+  
+	//Recorro el array y guardo en el string la info de los objetos que cumplan con la condicion
+	for (let i = 0; i < arrayPlaylist.length; i++) {
+	  if (arrayPlaylist[i].humor == opcion) stringResultado += "Nombre: " + arrayPlaylist[i].nombre + "\nLink: " + arrayPlaylist[i].link + "\n\n";
+	}
+  
+	//Muestro el restulado
+	alert(stringResultado);
+  };
+  
+  //Inicio
+  let nombre = prompt("Ingrese su nombre: ");
+  
+  alert("👋 Hola " + nombre + "! " + "Mi nombre es Sofía, soy la creadora de ésta aplicación. ¡Un gusto! Te voy a ayudar a encontrar una playlist a medida... ¿Comenzamos? 🙂");
+  
+  let humor = prompt(`¿Cómo te sentís hoy? Ingrese el número que más se le acerque:
+  1. triste 😔
+  2. feliz 😀
+  3. tranquilo 😌
+  4. aventurero 🤗`);
+  
+  switch (humor) {
 	case "1":
-	let idioma = prompt (`¿En qué idioma preferís escuchar música?:
-1. Inglés
-2. Español
-3. Varias
-4. Instrumental (sin letra)`);
-	switch (idioma) {
-				case "1":
-					edad ();
-					break;
-				case "2":
-					edad ();
-					break;
-				case "3":
-					edad ();
-					break;
-				case "4":
-					edad ();
-					break;
-			};
-			break;
-		case "2":
-			let idiom = prompt (`¿En qué idioma preferís escuchar música?:
-1. Inglés
-2. Español
-3. Varias
-4. Instrumental (sin letra)`);
-		switch (idiom) {
-			case "1":
-				edad ();
-				break;
-			case "2":
-				edad ();
-				break;
-			case "3":
-				edad ();
-				break;
-			case "4":
-				edad ();
-				break;
-		}
-	}
-	}
-	else if(music.toLowerCase()=="triste"){
-	let genre = prompt (`Entiendo... ¿Por cuál género te soles inclinar en estos casos?:
-1. Música acústica
-2. Blues/Jazz`);
-	switch (genre) {
-		case "1":
-			let idioma = prompt (`¿En qué idioma preferís escuchar música?:
-1. Inglés
-2. Español
-3. Varias
-4. Instrumental (sin letra)`);
-			switch (idioma) {
-				case "1":
-					edad ();
-					break;
-				case "2":
-					edad ();
-					break;
-				case "3":
-					edad ();
-					break;
-				case "4":
-					edad ();
-					break;
-			};
-			break;
-		case "2":
-			let idiom = prompt (`¿En qué idioma preferís escuchar música?:
-1. Inglés
-2. Español
-3. Varias
-4. Instrumental (sin letra)`);
-			switch (idiom) {
-				case "1":
-					edad ();
-					break;
-				case "2":
-					edad ();
-					break;
-				case "3":
-					edad ();
-					break;
-				case "4":
-					edad ();
-					break;
-			};
-			break;
-	}
-	}
-	else if(music.toLowerCase()=="tranquilidad"){
-		let genre = prompt (`No es mala decisión. ¿Preferís con letra o solo instrumental?:
-1. Con letra
-2. Sin letra`);
-		switch (genre) {
-			case "1":
-				let idioma = prompt (`¿En qué idioma preferís escuchar música?:
-1. Inglés
-2. Español
-3. Varios idiomas`);
-			switch (idioma) {
-				case "1":
-					edad ();
-					break;
-				case "2":
-					edad ();
-					break;
-				case "3":
-					edad ();
-					break;
-				}
-			break;
-			case "2":
-				edad ();
-				break;
-		};
-		break;
-		}
-	else{
-		alert ("Lamentablemente, no contaba con esa opción");
-		break;
-	};
-	break;
-
-case "2":
-	let felicidad = prompt("¡Me alegra escuchar eso! ¿Deseas MANTENER esta emoción o buscas TRANQUILIDAD?");
-	if (felicidad == "mantener"){
-		let genre = prompt (`¡Vamos! ¿Cuál género suele mantener tu felicidad?:
-1. pop/rock
-2. techno/electrónica`);
-	switch (genre) {
-	case "1":
-	let idioma = prompt (`¿En qué idioma lo preferís escuchar?:
-1. Inglés
-2. Español
-3. Varias
-4. Instrumental (sin letra)`);
-	switch (idioma) {
-				case "1":
-					edad ();
-					break;
-				case "2":
-					edad ();
-					break;
-				case "3":
-					edad ();
-					break;
-				case "4":
-					edad ();
-					break;
-			};
-			break;
-		case "2":
-			let idiom = prompt (`¿En qué idioma preferís escuchar música?:
-1. Inglés
-2. Español
-3. Varias
-4. Instrumental (sin letra)`);
-		switch (idiom) {
-			case "1":
-				edad ();
-				break;
-			case "2":
-				edad ();
-				break;
-			case "3":
-				edad ();
-				break;
-			case "4":
-				edad ();
-				break;
-		}
-	}
-	}
-	else if(felicidad.toLowerCase() == "tranquilidad") {
-		let genre = prompt (`No es mala decisión. ¿Preferís con letra o solo instrumental?:
-1. Con letra
-2. Sin letra`);
-				switch (genre) {
-					case "1":
-						let idioma = prompt (`¿En qué idioma preferís escuchar música?:
-1. Inglés
-2. Español
-3. Varios idiomas`);
-					switch (idioma) {
-						case "1":
-							edad ();
-							break;
-						case "2":
-							edad ();
-							break;
-						case "3":
-							edad ();
-							break;
-						}
-					break;
-					case "2":
-						edad ();
-						break;
-				};
-				break;
-	}
-	else{
-		alert ("Lamentablemente, no contaba con esa opción");
-		break;
-	};
-	break;
-
-case "3":
-let tranquilo = prompt (`Mi decisión favorita :) ¿Preferís con letra o solo instrumental?:
-1. Con letra
-2. Sin letra`);
-		switch (tranquilo) {
-			case "1":
-				let idioma = prompt (`¿En qué idioma preferís escuchar música?:
-1. Inglés
-2. Español
-3. Varios idiomas`);
-			switch (idioma) {
-				case "1":
-					edad ();
-					break;
-				case "2":
-					edad ();
-					break;
-				case "3":
-					edad ();
-					break;
-				}
-			break;
-			case "2":
-				edad ();
-				break;
-		};
-	break;
-case "4":
-	let aventura = prompt (`¡Me encanta ese espíritu aventurero! ¿Arrancamos con canciones de antes del 2000 o luego del 2000?
-1. antes del 2000
-2. Después del 2000`);
-	switch (aventura){
-		case "1":
-			let idioma = prompt (`¿En qué idioma preferís escuchar hoy?:
-1. Inglés
-2. Español
-3. Varios idiomas`);
-			switch (idioma) {
-				case "1":
-					edad ();
-					break;
-				case "2":
-					edad ();
-					break;
-				case "3":
-					edad ();
-					break;
-				}
-			break;
-		case "2":
-			let idiom = prompt (`¿En qué idioma preferís escuchar hoy?:
-1. Inglés
-2. Español
-3. Varios idiomas`);
-			switch (idiom) {
-				case "1":
-					edad ();
-					break;
-				case "2":
-					edad ();
-					break;
-				case "3":
-					edad ();
-					break;
-				}
-			break;
-	}
-break;
-default:
-	break;
-};
+	  MostrarPlaylist("triste");
+	  break;
+	case "2":
+	  MostrarPlaylist("feliz");
+	  break;
+	case "3":
+	  MostrarPlaylist("tranquilo");
+	  break;
+	case "4":
+	  MostrarPlaylist("aventurero");
+	  break;
+  }
