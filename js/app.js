@@ -27,7 +27,7 @@ const playlist1 = {
   arrayPlaylist.push(playlist1, playlist2, playlist3, playlist4);
   
   //Mi funcion para mostrar las playlist
-  const MostrarPlaylist = function (opcion) {
+  const mostrarPlaylist = function (opcion) {
 	//Creo el string para mostrar en el alert
 	let stringResultado = "Te recomiendo esta/s playlist 💪:\n\n";
   
@@ -53,15 +53,15 @@ const playlist1 = {
   
   switch (humor) {
 	case "1":
-	  MostrarPlaylist("triste");
+	  mostrarPlaylist("triste");
 	  break;
 	case "2":
-	  MostrarPlaylist("feliz");
+	  mostrarPlaylist("feliz");
 	  break;
 	case "3":
-	  MostrarPlaylist("tranquilo");
+	  mostrarPlaylist("tranquilo");
 	  break;
 	case "4":
-	  MostrarPlaylist("aventurero");
+	  mostrarPlaylist("aventurero");
 	  break;
   }
