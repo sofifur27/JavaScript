@@ -1,7 +1,10 @@
-//Mis objetos
-const playlist1 = {
+let nombre = prompt("Ingrese su nombre: ");
+  
+  alert("👋 Hola " + nombre + "! " + "Mi nombre es Sofía, soy la creadora de ésta aplicación. ¡Un gusto! Te voy a ayudar a encontrar una playlist a medida... ¿Comenzamos? 🙂");
+  
+  const playlist1 = {
 	link: "https://open.spotify.com/playlist/4lANDEaojBTkN3A3m2WQq4?si=aXV0QvMcQKePhpmU4EANRA",
-	nombre: "playlist1",
+	nombre: "playlist 1",
 	humor: "triste",
   };
   const playlist2 = {
@@ -19,49 +22,35 @@ const playlist1 = {
 	nombre: "playlist 4",
 	humor: "aventurero",
   };
-  
-  //Creo mi array
-  const arrayPlaylist = [];
-  
-  //Agrego mis objetos al array
-  arrayPlaylist.push(playlist1, playlist2, playlist3, playlist4);
-  
-  //Mi funcion para mostrar las playlist
+
+let humorFeliz = document.getElementById("card1");
+let humorTriste = document.getElementById("card2");
+let humorTranqui = document.getElementById("card3");
+let humorAventura = document.getElementById("card4");
+
+const playlist = [playlist1, playlist2, playlist3, playlist4];
+playlist.push(playlist1, playlist2, playlist3, playlist4);
+
   const mostrarPlaylist = function (opcion) {
-	//Creo el string para mostrar en el alert
+
 	let stringResultado = "Te recomiendo esta/s playlist 💪:\n\n";
-  
-	//Recorro el array y guardo en el string la info de los objetos que cumplan con la condicion
-	for (let i = 0; i < arrayPlaylist.length; i++) {
-	  if (arrayPlaylist[i].humor == opcion) stringResultado += "Nombre: " + arrayPlaylist[i].nombre + "\nLink: " + arrayPlaylist[i].link + "\n\n";
+	for (let i = 0; i < playlist.length; i++) {
+	  if (playlist[i].playlist == opcion) stringResultado += `Nombre: ${playlist[i].nombre}\nLink: ${playlist[i].link}\n\n`;
 	}
-  
-	//Muestro el restulado
 	alert(stringResultado);
   };
   
-  //Inicio
-  let nombre = prompt("Ingrese su nombre: ");
-  
-  alert("👋 Hola " + nombre + "! " + "Mi nombre es Sofía, soy la creadora de ésta aplicación. ¡Un gusto! Te voy a ayudar a encontrar una playlist a medida... ¿Comenzamos? 🙂");
-  
-  let humor = prompt(`¿Cómo te sentís hoy? Ingrese el número que más se le acerque:
-  1. triste 😔
-  2. feliz 😀
-  3. tranquilo 😌
-  4. aventurero 🤗`);
-  
-  switch (humor) {
-	case "1":
-	  mostrarPlaylist("triste");
-	  break;
-	case "2":
-	  mostrarPlaylist("feliz");
-	  break;
-	case "3":
-	  mostrarPlaylist("tranquilo");
-	  break;
-	case "4":
-	  mostrarPlaylist("aventurero");
-	  break;
-  }
+
+
+humorFeliz.addEventListener('click', ()=>{
+	mostrarPlaylist(playlist);
+});
+humorTriste.addEventListener('click', ()=>{
+	mostrarPlaylist(playlist);
+});
+humorTranqui.addEventListener('click', ()=>{
+	mostrarPlaylist(playlist);
+});
+humorAventura.addEventListener('click', ()=>{
+	mostrarPlaylist(playlist);
+});
