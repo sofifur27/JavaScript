@@ -29,13 +29,12 @@ let humorTranqui = document.getElementById("card3");
 let humorAventura = document.getElementById("card4");
 
 const playlist = [playlist1, playlist2, playlist3, playlist4];
-playlist.push(playlist1, playlist2, playlist3, playlist4);
 
   const mostrarPlaylist = function (opcion) {
 
-	let stringResultado = "Te recomiendo esta/s playlist 💪:\n\n";
+	let stringResultado = "Te recomiendo esta playlist 💪:\n\n";
 	for (let i = 0; i < playlist.length; i++) {
-	  if (playlist[i].playlist == opcion) stringResultado += `Nombre: ${playlist[i].nombre}\nLink: ${playlist[i].link}\n\n`;
+	  if (playlist[i].humor == opcion) stringResultado += `Nombre: ${playlist[i].nombre}\nLink: ${playlist[i].link}\n\n`;
 	}
 	alert(stringResultado);
   };
@@ -43,14 +42,17 @@ playlist.push(playlist1, playlist2, playlist3, playlist4);
 
 
 humorFeliz.addEventListener('click', ()=>{
-	mostrarPlaylist(playlist);
+	mostrarPlaylist("feliz");
 });
+
 humorTriste.addEventListener('click', ()=>{
-	mostrarPlaylist(playlist);
+	mostrarPlaylist("triste");
 });
+
 humorTranqui.addEventListener('click', ()=>{
-	mostrarPlaylist(playlist);
+	mostrarPlaylist("tranquilo");
 });
+
 humorAventura.addEventListener('click', ()=>{
-	mostrarPlaylist(playlist);
+	mostrarPlaylist("aventurero");
 });
