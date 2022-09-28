@@ -6,11 +6,13 @@
     box-sizing: border-box;
     font-weight: normal;
   }
-  
+  label, p {
+    color: white;
+  }
   body{
     background-image: url(../bodyback.jpg);
   }
-  h1{
+  h1, h2{
     color: whitesmoke;
     text-align: center;
   }
@@ -65,4 +67,9 @@
   }
   .title-black {
     color: black;
+  }
+
+  .boton{
+    margin-top: 60px;
+    margin-left: 100px;
   }
