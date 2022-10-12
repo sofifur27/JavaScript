@@ -6,6 +6,7 @@ if (usuario==''){
     swal.fire({
         title: 'Indiquenos su nombre:',
         input: 'nombre',
+        inputPlaceholder: 'nombre',
         showCancelButton: false,
         confirmButtonText: 'Enviar',
         showLoaderOnConfirm: true,
