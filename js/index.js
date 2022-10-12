@@ -4,7 +4,7 @@ const msjMensaje = document.querySelector('#msjBienvenida');
 
 
 if (usuario==''){
-    const name = await Swal.fire({
+    await Swal.fire({
     title: 'Ingrese su nombre:',
     input: 'name',
     inputLabel: 'Su nombre',
