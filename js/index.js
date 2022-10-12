@@ -5,11 +5,22 @@ const msjMensaje = document.querySelector('#msjBienvenida');
 if (usuario==''){
     swal.fire({
         title: 'Indiquenos su nombre:',
-        input: 'nombre',
+        input: 'name',
         inputPlaceholder: 'nombre',
-        showCancelButton: false,
         confirmButtonText: 'Enviar',
         showLoaderOnConfirm: true,
+        preConfirm: (name) => {
+            return new Promise((resolve) => {
+              setTimeout(() => {
+                if (email === 'example@email.com') {
+                  swal.showValidationError(
+                    'This email is already taken.'
+                  )
+                }
+                resolve()
+            }, 2000)
+          })
+        }
   })
     localStorage.setItem('usuario',usuario);
     actualizarMensaje();
