@@ -2,7 +2,9 @@ let usuario = localStorage.getItem ('usuario') || '';
 
 const msjMensaje = document.querySelector('#msjBienvenida');
 
-const { value: name } = await Swal.fire({
+
+if (usuario==''){
+    const name = await Swal.fire({
     title: 'Ingrese su nombre:',
     input: 'name',
     inputLabel: 'Su nombre',
@@ -20,12 +22,9 @@ const { value: name } = await Swal.fire({
       })
     }
   })
-if (usuario==''){
-    Swal.fire(`Entered name: ${name}`)
-  }
     localStorage.setItem('usuario',usuario);
     actualizarMensaje();
-
+}
 actualizarMensaje();
 console.log(usuario);
 
