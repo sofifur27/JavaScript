@@ -3,7 +3,7 @@ let usuario = localStorage.getItem ('usuario') || '';
 const msjMensaje = document.querySelector('#msjBienvenida');
 
 if (usuario==''){
-    swal({
+    swal.fire({
         title: 'Indiquenos su nombre:',
         input: 'nombre',
         showCancelButton: false,
