@@ -2,29 +2,30 @@ let usuario = localStorage.getItem ('usuario') || '';
 
 const msjMensaje = document.querySelector('#msjBienvenida');
 
-if (usuario==''){
-    swal.fire({
-        title: 'Indiquenos su nombre:',
-        input: 'name',
-        inputPlaceholder: 'nombre',
-        confirmButtonText: 'Enviar',
-        showLoaderOnConfirm: true,
-        preConfirm: (name) => {
-            return new Promise((resolve) => {
-              setTimeout(() => {
-                if (email === 'example@email.com') {
-                  swal.showValidationError(
-                    'This email is already taken.'
-                  )
-                }
-                resolve()
-            }, 2000)
-          })
-        }
+const { value: name } = await Swal.fire({
+    title: 'Ingrese su nombre:',
+    input: 'name',
+    inputLabel: 'Su nombre',
+    inputPlaceholder: 'Ingrese su nombre',
+    preConfirm: (name) => {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            if (name === 'usuario') {
+              swal.showValidationError(
+                'This name is already taken.'
+              )
+            }
+            resolve()
+        }, 2000)
+      })
+    }
   })
+if (usuario==''){
+    Swal.fire(`Entered name: ${name}`)
+  }
     localStorage.setItem('usuario',usuario);
     actualizarMensaje();
-}
+
 actualizarMensaje();
 console.log(usuario);
 
