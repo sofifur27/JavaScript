@@ -1,5 +1,15 @@
-Swal.fire(
-  '¡Bienvenido/a!',
-  'Soy Sofi, la creadora de ésta aplicación. ¡Un gusto! Te voy a ayudar a encontrar una playlist a medida... ¿Comenzamos? 🙂',
-  'success'
-)
+let usuario = localStorage.getItem("usuario") || '';
+let mensaje = document.querySelector('#mensaje');
+
+if(usuario==''){
+  Swal.fire({
+    title:'¡Bienvenido/a!',
+    text:'Ingrese su nombre',
+    input: 'text',
+    preConfirm: (nombre)=>{
+      usuario = nombre;
+      localStorage.setItem('usuario',nombre);
+    }
+  })
+}
+mensaje.textContent=`Hola ${usuario}`

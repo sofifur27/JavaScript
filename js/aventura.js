@@ -1,11 +1,33 @@
+let playlist = [];
+let contenedor = document.querySelector('#contenedor');
 
-let musicaLocal = document.getElementById("boton7");
-let musicaIntern = document.getElementById("boton8");
+const filtrarYPintar = (lista) => {
+	let listaFiltrada = lista.filter(elemento => elemento.estado == "aventura");
+	console.log(listaFiltrada);
 
-musicaLocal.addEventListener('click', ()=>{
-	window.location.href = "https://open.spotify.com/playlist/37i9dQZF1E4kMlJnQxolyQ?si=21866f4b952e46d9";
-});
+	listaFiltrada.forEach(element => {
+		contenedor.innerHTML += `
+		<div class="card">
+      		<div class="card_image">
+       			 <img src="${element.img}" />
+     		 </div>
+      		<div class="card_title">
+        		<p class="title-black">${element.musica}</p>
+      		</div>
+      		<div id="boton8" class="boton">
+        		<a href="${element.link}" class="btn btn-dark">PLAYLIST</a>
+      		</div>
+    	</div>
+		`
+	});
+};
 
-musicaIntern.addEventListener('click', ()=>{
-	window.location.href = "https://open.spotify.com/playlist/5p1a0o3wbBx39CPQTO1GHU?si=c47c223896134005"; 
-});
+const leerDatos = async () => {
+	let resp = await fetch("/js/data.json");
+	let data = await resp.json();
+	console.log(data);
+
+	playlist = data;
+	filtrarYPintar(playlist)
+};
+leerDatos()
