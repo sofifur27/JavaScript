@@ -1,10 +1,34 @@
-let musicaInstrumental = document.getElementById("boton3");
-let musicaAcustica = document.getElementById("boton4");
+let playlist = [];
+let contenedor = document.querySelector('#contenedor');
 
-musicaInstrumental.addEventListener('click', ()=>{
-	window.location.href = "https://open.spotify.com/playlist/0123C4HLWdQlBDMsLEATGT?si=c7ff4df0929c464e";
-});
+const filtrarYPintar = (lista) => {
+	let listaFiltrada = lista.filter(elemento => elemento.estado == "triste");
+	console.log(listaFiltrada);
 
-musicaAcustica.addEventListener('click', ()=>{
-	window.location.href = "https://open.spotify.com/playlist/5nwzMNwrAWiLAbI4TIglPC?si=7838e45ff5c349cb"; 
-});
+listaFiltrada.forEach(element => {
+	contenedor.innerHTML += `
+	<div class="card">
+      		<div class="card_image">
+       			 <img src="${element.img}" />
+     		 </div>
+      		<div class="card_title">
+        		<p class="title-black">${element.musica}</p>
+      		</div>
+      		<div id="boton8" class="boton">
+        		<a href="${element.link}" class="btn btn-dark">PLAYLIST</a>
+      		</div>
+    	</div>
+	`
+}
+)
+}
+
+const leerDatos = async () => {
+	let response = await fetch('../data.json');
+	let data = await response.json();
+	console.log (data);
+
+	playlist = data;
+	filtrarYPintar(playlist)
+}
+leerDatos()

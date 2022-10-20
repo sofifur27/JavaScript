@@ -5,9 +5,9 @@ const filtrarYPintar = (lista) => {
 	let listaFiltrada = lista.filter(elemento => elemento.estado == "feliz");
 	console.log(listaFiltrada);
 
-	listaFiltrada.forEach(element => {
-		contenedor.innerHTML += `
-		<div class="card">
+listaFiltrada.forEach(element => {
+	contenedor.innerHTML += `
+	<div class="card">
       		<div class="card_image">
        			 <img src="${element.img}" />
      		 </div>
@@ -18,16 +18,17 @@ const filtrarYPintar = (lista) => {
         		<a href="${element.link}" class="btn btn-dark">PLAYLIST</a>
       		</div>
     	</div>
-		`
-	});
+	`
+}
+)
 }
 
 const leerDatos = async () => {
-	let resp = await fetch("/js/data.json");
-	let data = await resp.json();
-	console.log(data);
+	let response = await fetch('../data.json');
+	let data = await response.json();
+	console.log (data);
 
 	playlist = data;
-	filtrarYPintar(playlist);
+	filtrarYPintar(playlist)
 }
 leerDatos()

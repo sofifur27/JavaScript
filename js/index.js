@@ -1,5 +1,5 @@
 let usuario = localStorage.getItem("usuario") || '';
-let mensaje = document.querySelector('#mensaje');
+let mensaje = document.querySelector('#mensaje')
 
 if(usuario==''){
   Swal.fire({
